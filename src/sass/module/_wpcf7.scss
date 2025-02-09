@@ -1,0 +1,114 @@
+@use "global" as *;
+
+.wpcf7-list-item:not(:first-child) {
+  margin-top: rem(4);
+}
+
+.wpcf7-list-item {
+  position: relative;
+  display: block;
+  margin-left: rem(0);
+}
+
+.wpcf7-list-item-label::before {
+  position: absolute;
+  content: "";
+  width: rem(14);
+  height: rem(14);
+  border: rem(1) solid $green;
+  left: rem(-22);
+  top: rem(4);
+  display: block;
+}
+
+.wpcf7-list-item-label::after {
+  position: absolute;
+  content: "";
+  border-bottom: rem(2) solid $red;
+  border-left: rem(2) solid $red;
+  height: rem(5);
+  left: rem(-20);
+  margin-top: rem(7);
+  opacity: 0;
+  top: rem(0);
+  transform: rotate(-45deg);
+  width: rem(9);
+  display: block;
+}
+
+/* チェックボックスが選択された時にスタイルを適用 */
+
+span.wpcf7-list-item label input[type="checkbox"]:checked + .wpcf7-list-item-label::after {
+  opacity: 1;
+}
+
+
+.wpcf7-text.wpcf7-validates-as-required {
+  margin-top: rem(20);
+  border: rem(1) solid $green;
+  width: 100%;
+  padding-top: rem(9);
+  padding-bottom: rem(5);
+  padding-left: rem(16);
+  padding-right: rem(16);
+
+  @include mq("md") {
+    margin-top: 0;
+    min-width: rem(480);
+  }
+}
+
+.wpcf7-text.wpcf7-validates-as-required::placeholder {
+  color: $green2;
+}
+
+.wpcf7-select {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  font-size: rem(12);
+  font-weight: $normal;
+  cursor: pointer;
+
+  @include mq("md") {
+    min-width: rem(480);
+    margin-top: 0;
+  }
+}
+
+.wpcf7-select::placeholder {
+  color: $green2;
+}
+
+.wpcf7-select select {
+  width: 100%;
+  cursor: pointer;
+}
+
+.wpcf7-select::before {
+  position: absolute;
+  top: rem(10);
+  right: rem(8);
+  width: 0;
+  height: 0;
+  border-width: rem(10) rem(5) 0 rem(5);
+  border-style: solid;
+  border-color: $green transparent transparent transparent;
+  content: "";
+}
+
+.wpcf7-textarea.wpcf7-validates-as-required {
+  width: 100%;
+  padding: rem(10);
+  height: rem(200);
+  border: 1px solid $green;
+  resize: none;
+
+  @include mq("md") {
+    min-width: rem(480);
+  }
+}
+
+.wpcf7-spinner {
+  display: none;
+}

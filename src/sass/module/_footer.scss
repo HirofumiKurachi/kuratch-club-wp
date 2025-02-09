@@ -1,0 +1,38 @@
+@use "global" as *;
+
+.footer__inner {
+  max-width: rem(600);
+}
+
+.footer__container {
+
+  @include mq("md") {
+    margin-top: rem(12);
+    white-space: nowrap;
+  }
+}
+
+
+.footer__copyright {
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+  color: $white;
+  padding-left: rem(14);
+  padding-right: rem(14);
+  background-color: $green;
+  display: block;
+  width: 100%;
+  font-family: "Gotu", sans-serif;
+  margin-top: rem(26);
+  text-align: center;
+
+  @include mq("md") {
+    padding-bottom: rem(0);
+    display: flex;
+    justify-content: center;
+    font-size: rem(14);
+    line-height: calc(18 / 14);
+    margin-top: rem(65);
+  }
+}

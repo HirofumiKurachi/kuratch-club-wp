@@ -1,0 +1,158 @@
+@use "global" as *;
+
+.site-map-menu {
+  display: flex;
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.site-map-menu__left {
+  width: 50%;
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(142);
+  }
+}
+
+.site-map-menu__item {
+  text-align: center;
+  position: relative;
+  align-items: center;
+  display: block;
+  white-space: nowrap;
+}
+
+.site-map-menu__left-items-upper {
+  width: 100%;
+  padding-left: rem(23);
+}
+
+.site-map-menu__left-items-bottom {
+  width: 100%;
+  padding-left: rem(22);
+  margin-top: rem(16);
+
+  @include mq("md") {
+    margin-top: rem(0);
+    margin-left: rem(0);
+  }
+}
+
+.site-map-menu__right-items-upper {
+  width: 100%;
+  padding-left: rem(23);
+}
+
+.site-map-menu__right-items-bottom {
+  width: 100%;
+  padding-left: rem(22);
+  margin-top: rem(12);
+
+  @include mq("md") {
+    margin-top: rem(0);
+    margin-left: rem(0);
+  }
+}
+
+.site-map-menu__link-main {
+  width: 100%;
+  font-size: rem(16);
+  text-align: center;
+  color: $black;
+  display: flex;
+  padding-top: rem(12);
+  padding-bottom: rem(10);
+}
+
+.site-map-menu__link-sub {
+  width: 100%;
+  font-size: rem(16);
+  text-align: center;
+  color: $black;
+  display: flex;
+  padding-top: rem(12);
+  padding-bottom: rem(12);
+  margin-top: rem(17.3);
+}
+
+.site-map-menu__link-main::before {
+  content: "";
+  width: rem(18); /*画像の幅*/
+  height: rem(18); /*画像の高さ*/
+  background-image: url(../images/site-map-logo.svg);
+  background-size: contain;
+  top: rem(12);
+  left: rem(-23);
+  position: absolute;
+}
+.site-map-menu__link-sub::before {
+  content: "";
+  width: rem(18); /*画像の幅*/
+  height: rem(18); /*画像の高さ*/
+  background-image: url(../images/site-map-logo.svg);
+  background-size: contain;
+  top: rem(12);
+  left: rem(-23);
+  position: absolute;
+}
+
+.site-map-menu__logo-text {
+  font-size: rem(16);
+  color: $black;
+  font-weight: $bold;
+  text-align: left;
+  line-height: 1.125;
+  font-family: "Noto Sans JP", serif;
+}
+
+.site-map-menu__logo-text:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.site-map-menu__item-text {
+  padding-top: rem(11);
+  padding-bottom: rem(7);
+  color: $black;
+  vertical-align: middle;
+  list-style-type: none;
+  white-space: nowrap;
+  font-family: "Noto Sans JP", serif;
+}
+
+.site-map-menu__item-text-b {
+  padding-top: rem(12);
+  padding-bottom: rem(7);
+  color: $black;
+  vertical-align: middle;
+  list-style-type: none;
+  white-space: nowrap;
+}
+
+.site-map-menu__item-text:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.site-map-menu__item-text-b:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}
+
+.site-map-menu__right {
+  margin-left: rem(27);
+  width: 50%;
+
+  @include mq("md") {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: rem(147);
+    margin-left: rem(62);
+  }
+}
+

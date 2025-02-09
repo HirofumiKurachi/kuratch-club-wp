@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.blog-heading-accordion {
+  width: 100%;
+  margin-top: rem(20);
+
+  @include mq("md") {
+    margin-top: rem(24);
+  }
+}
+
+.blog-heading-accordion__item {
+  padding-left: rem(21);
+  margin-top: rem(3);
+}
+
+.blog-heading-accordion__title {
+  position: relative;
+  font-size: rem(24);
+  cursor: pointer;
+  color: $green;
+  padding-left: rem(10);
+  font-family: "Noto Sans JP", serif;
+  font-weight: $normal;
+
+  @include mq("md") {
+    padding-left: rem(8);
+  }
+}
+
+.blog-heading-accordion__title::before {
+  display: block;
+  background-repeat: no-repeat;
+  content: "";
+  transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+  width: rem(24); /*画像の幅*/
+  height: rem(24); /*画像の高さ*/
+  background-image: url(./../images/polygon1.svg);
+  background-size: contain;
+  top: 30%;
+  left: -6%;
+  position: absolute;
+
+  @include mq("md") {
+    top: 13%;
+  }
+}
+
+.blog-heading-accordion__title.is-open::before {
+  top: 38%;
+  left: -8%;
+  transform: rotate(90deg);
+
+  @include mq("md") {
+    top: 33%;
+  }
+}
+
+.blog-heading-accordion__content {
+  display: none;
+
+}
+
+.blog-heading-accordion__text {
+  font-size: rem(24);
+  color: $green;
+  position: relative;
+  text-indent: rem(26);
+  margin-top: rem(3);
+  padding-left: rem(8);
+  font-family: "Noto Sans JP", serif;
+  font-weight: $normal;
+  cursor: pointer;
+}
+
+.blog-heading-accordion__text::before {
+  width: rem(24); /*画像の幅*/
+  height: rem(24); /*画像の高さ*/
+  background-image: url(./../images/polygon1.svg);
+  background-size: contain;
+  top: 24%;
+  left: 3%;
+  position: absolute;
+  display: block;
+  background-repeat: no-repeat;
+  content: "";
+
+  @include mq("md") {
+    top: 15%;
+  }
+}

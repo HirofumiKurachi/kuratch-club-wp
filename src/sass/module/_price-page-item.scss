@@ -1,0 +1,18 @@
+@use "global" as *;
+
+.price-page-item__box {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+
+//WP化に伴い、scroll-margin-topを追加
+.price-page-item {
+  scroll-margin-top: rem(40);
+
+  @include mq("md") {
+    display: flex;
+    scroll-margin-top: rem(70);
+  }
+}
+

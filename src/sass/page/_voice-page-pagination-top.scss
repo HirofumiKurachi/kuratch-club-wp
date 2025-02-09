@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.voice-page-pagination-top {
+  margin-top: rem(78);
+
+  @include mq("md") {
+    margin-top: rem(72);
+  }
+}

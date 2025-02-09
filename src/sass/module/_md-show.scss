@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.md-show {
+  display: block;
+
+  @include mq("md") {
+    display: none;
+  }
+}

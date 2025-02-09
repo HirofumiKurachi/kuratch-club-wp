@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.page-section-title  {
+  font-size: rem(40);
+  font-weight: $normal;
+  color: $white;
+  font-family: "Lato", sans-serif;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  white-space: nowrap;
+
+  @include mq("md") {
+    font-size: rem(80);
+    line-height: calc(100/80);
+    top: 59%;
+  }
+
+}

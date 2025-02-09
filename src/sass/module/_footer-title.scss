@@ -1,0 +1,72 @@
+@use "global" as *;
+
+.footer__title {
+  @include mq("md") {
+    display: flex;
+  }
+}
+
+.footer-title__logo-box {
+  display: flex;
+  margin-top: rem(17);
+
+  @include mq("md") {
+    margin-left: rem(40);
+    padding-top: rem(30);
+    padding-bottom: rem(5);
+    margin-top: rem(10);
+  }
+}
+
+.footer-title__facebook-logo {
+  display: block;
+  width: rem(24);
+  height: rem(24);
+
+  @include mq("md") {
+    width: rem(32);
+    height: rem(32);
+  }
+}
+
+.footer-title__facebook-logo:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer-title__instagram-logo {
+  display: block;
+  width: rem(24);
+  height: rem(24);
+  margin-left: rem(16);
+
+  @include mq("md") {
+    width: rem(32);
+    height: rem(32);
+  }
+}
+
+.footer-title__instagram-logo:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.footer-title__name-layout {
+  display: flex;
+  align-items: center;
+}
+
+.footer-title__name-logo {
+  width: rem(120);
+
+  @include mq("md") {
+    width: rem(200);
+  }
+}
+
+.footer-title__name-logo:hover {
+  opacity: 0.7;
+  transition: 0.3s;
+}

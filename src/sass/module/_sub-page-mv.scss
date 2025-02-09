@@ -1,0 +1,36 @@
+@use "global" as *;
+
+.sub-page-mv {
+  position: relative;
+  height: rem(460);
+  @include mq("md") {
+      width: 100%;
+      height: rem(548);
+  }
+}
+
+.sub-page-mv::after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(64, 143, 149, 0.3);
+}
+
+.sub-page-mv__inner {
+  height: inherit;
+  position: relative;
+}
+
+.sub-page-mv__picture {
+  height: inherit;
+  display: block;
+}
+
+.sub-page-mv__picture img {
+  height: inherit;
+  object-fit: cover;
+}

@@ -1,0 +1,68 @@
+@use "global" as *;
+
+.blog-heading-card {
+  align-self: stretch;
+  background-color: #fff;
+  box-shadow: 0.125rem 0.125rem 0.625rem rgba(0, 0, 0, 0.25);
+  padding-bottom: rem(16);
+  padding-left: rem(16);
+  padding-right: rem(16);
+  padding-top: rem(16);
+}
+
+.blog-heading-card:hover {
+  cursor: pointer;
+}
+
+
+
+.blog-heading-card__item {
+  display: flex;
+}
+
+.blog-heading-card__body {
+  margin-left: rem(16);
+  margin-top: rem(-5);
+}
+
+.blog-heading-card__text {
+  font-size: rem(16);
+  font-weight: $medium;
+  line-height: 1.5;
+  font-family: Noto Sans JP;
+}
+
+
+.blog-heading-card__img img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 121/90;
+}
+
+.blog-heading-card__date {
+  font-size: rem(12);
+  font-weight: $normal;
+  line-height: 1.5;
+  font-family: "Gotu", sans-serif;
+}
+
+.blog-heading-card:hover .blog-heading-card__img img {
+  transform: scale(1.1);
+  transition: transform 0.5s ease-in-out; /* トランジションを一貫して設定 */
+}
+
+.blog-heading-card__img {
+  width: 46%;
+  transform: scale(1);
+  transition: transform 0.5s ease-in-out; /* トランジションを一貫して設定 */
+  overflow: hidden;
+  object-fit: cover;
+  aspect-ratio: 121/90;
+}
+
+.blog-heading-card__img img {
+  width: 100%;
+  object-fit: cover;
+  aspect-ratio: 121/90;
+  transition: transform 0.5s ease-in-out; /* トランジションを一貫して設定 */
+}

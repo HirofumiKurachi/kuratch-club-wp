@@ -1,0 +1,9 @@
+@use "global" as *;
+
+.blog-heading-cards-campaign {
+  margin-top: rem(24);
+
+  @include mq("md") {
+    margin-top: rem(25);
+  }
+}
